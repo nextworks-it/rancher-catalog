@@ -1,0 +1,10 @@
+name: Update-Manager
+description: |
+  Nextworks update-manager for Rancher 1.6
+version: v0.1.0-rancher1
+category: Platform
+maintainer: Hermes platform team
+license: all-right-reserved
+projectURL: http://www.nextworks.it/
+labels:
+  io.rancher.orchestration.supported: 'cattle'

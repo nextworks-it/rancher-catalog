@@ -1,0 +1,8 @@
+name: Nextworks-Supervisor
+description: |
+  Supervisor component for Symphony, Best and Sealux Nextworks' systems
+version: v0.1.0-rancher1
+category: Platform
+maintainer: Hermes platform team
+license: all-right-reserved
+projectURL: http://www.nextworks.it/

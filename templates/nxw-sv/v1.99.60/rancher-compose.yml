@@ -1,0 +1,42 @@
+version: '2'
+
+catalog:
+  name: "nxw-sv"
+  version: "v1.99.60-1"
+  minimum_rancher_version: v1.6.0
+  questions:
+    - variable: "SERIALUSB0"
+      label: "/dev/ttyUSB0 (USB to RS232 device)"
+      description: |
+        Map /dev/ttyUSB0 into supervisor container for USB-RS232 attached devices.
+        WARNING: If the device does not exist on the host node, the container will not start!
+      default: false
+      required: false
+      type: boolean
+    - variable: "SERIALUSB1"
+      label: "/dev/ttyUSB1 (USB to RS232 device)"
+      description: |
+        Map /dev/ttyUSB1 into supervisor container for USB-RS232 attached devices.
+        WARNING: If the device does not exist on the host node, the container will not start!
+      default: false
+      required: false
+      type: boolean
+    - variable: "SERIALUSB2"
+      label: "/dev/ttyUSB2 (USB to RS232 device)"
+      description: |
+        Map /dev/ttyUSB2 into supervisor container for USB-RS232 attached devices.
+        WARNING: If the device does not exist on the host node, the container will not start!
+      default: false
+      required: false
+      type: boolean
+    - variable: "SERIALUSB3"
+      label: "/dev/ttyUSB3 (USB to RS232 device)"
+      description: |
+        Map /dev/ttyUSB3 into supervisor container for USB-RS232 attached devices.
+        WARNING: If the device does not exist on the host node, the container will not start!
+      default: false
+      required: false
+      type: boolean
+
+nxw-sv:
+  retain_ip: true
