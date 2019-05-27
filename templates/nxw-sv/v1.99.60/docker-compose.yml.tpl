@@ -31,7 +31,7 @@ services:
     - SYS_TTY_CONFIG
     security_opt:
     - seccomp:unconfined
-    image: docker-registry-dev.nextworks.it/nxw-sv:1.99.60-1
+    image: docker-registry.nextworks.it/nxw-sv:1.99.60-1
     devices:
     - /dev/bus/usb:/dev/bus/usb:rwm
     - /dev/ttyS0:/dev/ttyS0:rwm
