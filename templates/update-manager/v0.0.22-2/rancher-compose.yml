@@ -26,7 +26,7 @@ catalog:
       label: "Rancher server port"
       type: int
     - variable: "RANCHER_PROJECT"
-      default: "default"
+      default: "Default"
       required: true
       label: "Rancher environment name"
       type: string
