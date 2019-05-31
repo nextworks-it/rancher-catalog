@@ -18,7 +18,7 @@ services:
       "--rancher-req-tout", "${RANCHER_REQ_TOUT}",
       "--log-level", "${LOG_LEVEL}"
     ]
-    network_mode: bridge
+    network_mode: host
     labels:
       io.rancher.container.network: 'true'
       io.rancher.container.pull_image: always
