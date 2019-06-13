@@ -1,7 +1,7 @@
 version: '2'
 services:
   update-manager:
-    image: docker-registry-dev.nextworks.it/update-manager:v0.0.22
+    image: docker-registry.nextworks.it/update-manager:v0.0.22
     # keep API_PORT fixed to the upmgr default
     ports:
       - ${HOST_PORT}:54567
