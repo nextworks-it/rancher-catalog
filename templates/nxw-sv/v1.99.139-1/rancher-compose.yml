@@ -1,0 +1,15 @@
+version: '2'
+
+catalog:
+  name: "nxw-sv"
+  version: "v1.99.139-1"
+  minimum_rancher_version: v1.6.25
+
+nxw-sv:
+  start_on_create: true
+  retain_ip: true
+  upgrade_strategy:
+    start_first: false
+
+janitor:
+  start_on_create: true
