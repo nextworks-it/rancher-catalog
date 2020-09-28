@@ -1,11 +1,12 @@
 version: '2'
 services:
-  update-manager:
-    image: docker-registry.nextworks.it/update-manager:v0.1.1
-    # keep API_PORT fixed to the upmgr default
+  oamd:
+    image: docker-registry-dev.nextworks.it/oamd:v0.2.3
+    restart: on-failure
+    # keep API_PORT fixed to the oamd default
     ports:
       - ${HOST_PORT}:54567
-    entrypoint: /bin/upmgr
+    entrypoint: /bin/oamd
     command: [
       "--grpc-addr", "${API_ADDR}",
       "--rest-addr", "${REST_ADDR}",
@@ -30,7 +31,7 @@ services:
         # 'host' networking mode, so the syslog running on supervisor is also
         # reachable tu such address.
         syslog-address: udp://172.17.0.1:5000
-        tag: "update-manager"
+        tag: "oamd"
     labels:
       io.rancher.container.network: 'true'
       io.rancher.container.pull_image: always
