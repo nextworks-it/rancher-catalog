@@ -1,7 +1,7 @@
 version: '2'
 services:
   oamd:
-    image: docker-registry-dev.nextworks.it/oamd:v0.2.3
+    image: docker-registry.nextworks.it/oamd:v0.2.3
     restart: on-failure
     # keep API_PORT fixed to the oamd default
     ports:
