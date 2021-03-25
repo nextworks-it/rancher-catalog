@@ -1,0 +1,73 @@
+version: '2'
+
+catalog:
+  name: "nxw-sv"
+  version: "v2.0.8-1"
+  minimum_rancher_version: v1.6.25
+
+nxw-sv:
+  start_on_create: true
+  retain_ip: true
+  upgrade_strategy:
+    start_first: false
+  health_check:
+    # Which port to perform the check against
+    port: 80
+    request_line: GET /supervisor_console/cmd/status HTTP/1.0
+    # Interval is measured in milliseconds
+    interval: 10000
+    initializing_timeout: 180000
+    reinitializing_timeout: 60000
+    unhealthy_threshold: 5
+    # Strategy for what to do when unhealthy
+    # In this service, no action will occur when a container is found unhealthy
+    strategy: recreate
+    healthy_threshold: 2
+    # Response timeout is measured in milliseconds
+    response_timeout: 5000
+
+janitor:
+  start_on_create: true
+
+panels-factory-be:
+  start_on_create: true
+  retain_ip: true
+  upgrade_strategy:
+    start_first: false
+
+mongodb:
+  start_on_create: true
+  retain_ip: true
+  upgrade_strategy:
+    start_first: false
+
+mqtt:
+  start_on_create: true
+  retain_ip: true
+  upgrade_strategy:
+    start_first: false
+
+conditions-gateway:
+  start_on_create: true
+  retain_ip: true
+  upgrade_strategy:
+    start_first: false
+
+alarm-manager:
+  start_on_create: true
+  retain_ip: true
+  upgrade_strategy:
+    start_first: false
+
+channel-manager:
+  start_on_create: true
+  retain_ip: true
+  upgrade_strategy:
+    start_first: false
+
+tex-server:
+  start_on_create: true
+  retain_ip: true
+  upgrade_strategy:
+    start_first: false
+
