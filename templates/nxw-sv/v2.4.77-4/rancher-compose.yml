@@ -2,7 +2,7 @@ version: '2'
 
 catalog:
   name: "nxw-sv"
-  version: "v2.4.77-3"
+  version: "v2.4.77-4"
   minimum_rancher_version: v1.6.25
   questions:
     - variable: "ENABLE_DHCP"
