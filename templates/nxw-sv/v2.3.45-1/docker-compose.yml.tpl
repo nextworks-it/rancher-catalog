@@ -41,7 +41,8 @@ services:
     labels:
       io.rancher.container.dns: 'true'
       io.rancher.container.network: 'true'
-      io.rancher.container.pull_image: always
+      #io.rancher.container.pull_image: always
+      it.nextworks.dependencies: "oamd >= v1.6.10, oamd < v2.0.0-1"
     environment:
       - PYTHONPATH=/opt/hermes/lib/python
       - OAMD_SERVICE_HOST=oamd.oamd.rancher.internal
