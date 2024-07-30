@@ -1,0 +1,243 @@
+version: '2'
+
+catalog:
+  name: "nxw-sv"
+  version: "v2.3.48-1"
+  minimum_rancher_version: v1.6.25
+  questions:
+    - variable: "ENABLE_DHCP"
+      default: false
+      required: false
+      label: "ENABLE_DHCP"
+      type: boolean
+
+
+nxw-sv:
+  start_on_create: true
+  retain_ip: true
+  upgrade_strategy:
+    start_first: false
+  health_check:
+    # Which port to perform the check against
+    port: 80
+    request_line: GET /supervisor_console/cmd/status HTTP/1.0
+    # Interval is measured in milliseconds
+    interval: 10000
+    initializing_timeout: 180000
+    reinitializing_timeout: 60000
+    unhealthy_threshold: 5
+    # Strategy for what to do when unhealthy
+    # In this service, no action will occur when a container is found unhealthy
+    strategy: recreate
+    healthy_threshold: 2
+    # Response timeout is measured in milliseconds
+    response_timeout: 5000
+
+janitor:
+  start_on_create: true
+
+rabbitmq:
+  start_on_create: true
+  retain_ip: true
+  upgrade_strategy:
+    start_first: false
+
+nxw-etcd:
+  start_on_create: true
+  retain_ip: true
+  upgrade_strategy:
+    start_first: false
+
+fuseki:
+  start_on_create: true
+  retain_ip: true
+  upgrade_strategy:
+    start_first: false
+
+posd:
+  start_on_create: true
+  retain_ip: true
+  upgrade_strategy:
+    start_first: false
+
+go2rtc:
+  start_on_create: true
+  retain_ip: true
+  upgrade_strategy:
+    start_first: false
+
+cctv-backend:
+  start_on_create: true
+  retain_ip: true
+  upgrade_strategy:
+    start_first: false
+
+license-manager:
+  start_on_create: true
+  retain_ip: true
+  upgrade_strategy:
+    start_first: false
+
+plinsky:
+  start_on_create: true
+  retain_ip: true
+  upgrade_strategy:
+    start_first: false
+
+bundle-manager:
+  start_on_create: true
+  retain_ip: true
+  upgrade_strategy:
+    start_first: false
+
+chrono-manager:
+  start_on_create: true
+  retain_ip: true
+  upgrade_strategy:
+    start_first: false
+
+panels-factory-be:
+  start_on_create: true
+  retain_ip: true
+  upgrade_strategy:
+    start_first: false
+
+mongodb:
+  start_on_create: true
+  retain_ip: true
+  upgrade_strategy:
+    start_first: false
+
+mqtt:
+  start_on_create: true
+  retain_ip: true
+  upgrade_strategy:
+    start_first: false
+
+conditions-gateway:
+  start_on_create: true
+  retain_ip: true
+  upgrade_strategy:
+    start_first: false
+
+alarm-manager:
+  start_on_create: true
+  retain_ip: true
+  upgrade_strategy:
+    start_first: false
+
+channel-manager:
+  start_on_create: true
+  retain_ip: true
+  upgrade_strategy:
+    start_first: false
+
+tex-server:
+  start_on_create: true
+  retain_ip: true
+  upgrade_strategy:
+    start_first: false
+
+siabot:
+  start_on_create: true
+  retain_ip: true
+  upgrade_strategy:
+    start_first: false
+
+fvstorage:
+  start_on_create: true
+  retain_ip: true
+  upgrade_strategy:
+    start_first: false
+
+analytic:
+  start_on_create: true
+  retain_ip: true
+  upgrade_strategy:
+    start_first: false
+
+avo:
+  start_on_create: true
+  retain_ip: true
+  upgrade_strategy:
+    start_first: false
+
+favo:
+  start_on_create: true
+  retain_ip: true
+  upgrade_strategy:
+    start_first: false
+
+av-cfg-fe:
+  start_on_create: true
+  retain_ip: true
+  upgrade_strategy:
+    start_first: false
+
+osrd:
+  start_on_create: true
+  retain_ip: true
+  upgrade_strategy:
+    start_first: false
+
+logrotate:
+  start_on_create: true
+  retain_ip: true
+  upgrade_strategy:
+    start_first: false
+
+fluent-bit:
+  start_on_create: true
+  retain_ip: true
+  upgrade_strategy:
+    start_first: false
+
+uhal:
+  start_on_create: true
+  retain_ip: true
+  upgrade_strategy:
+    start_first: false
+
+restifier:
+  start_on_create: true
+  retain_ip: true
+  upgrade_strategy:
+    start_first: false
+
+wake-on-lan:
+  start_on_create: true
+  retain_ip: true
+  upgrade_strategy:
+    start_first: false
+
+ais:
+  start_on_create: true
+  retain_ip: true
+  upgrade_strategy:
+    start_first: false
+
+sem:
+  start_on_create: true
+  retain_ip: true
+  upgrade_strategy:
+    start_first: false
+
+spa-config:
+  start_on_create: true
+  retain_ip: true
+  upgrade_strategy:
+    start_first: false
+
+tms:
+  start_on_create: true
+  retain_ip: true
+  upgrade_strategy:
+    start_first: false
+
+#anomaly-manager:
+#  start_on_create: true
+#  retain_ip: true
+#  upgrade_strategy:
+#    start_first: false
+
+
